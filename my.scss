@@ -436,6 +436,7 @@ section.services{
 .contact-header{
    text-align: center;
    color:white;
+   transition:all 0.5s;
 
    h1{
       font-size: 36px;
@@ -460,6 +461,7 @@ section.services{
    .container{
       max-width: 800px;
       text-align: center;
+      transition:all 0.5s;
 
       a{
          padding:10px 20px;
@@ -603,4 +605,15 @@ footer{
    span{
       color:#e74c3c;
    }
+}
+
+/**** The end finally came ****/
+
+/**** Begin some magic classes ****/
+
+
+.transform{
+   transition:all 0.5s;
+   transform: scale(0.2);
+   opacity:0.2;
 }

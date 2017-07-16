@@ -74,11 +74,53 @@ $('.testimonial-carousel').carouFredSel({
 });
 
 $(window).scroll(function(){
-   let top= $(window).scrollTop();
-   if(top>120){
+   let scrollTop= $(window).scrollTop();
+   if(scrollTop>120){
       $('header').css('background-color','#34495e');
-      return;
+
+   }else{$('header').css('background-color','unset');}
+
+   let portofolioOffset = $('.portofolio').offset().top - scrollTop;
+
+   if(portofolioOffset < 700){
+      $('.portofolio').css('visibility','visible');
+      $('.portofolio').addClass('animated fadeInLeft');
    }
-   $('header').css('background-color','unset');
+
+   let testimonialsOffset = $('.testimonials').offset().top - scrollTop;
+
+   if(testimonialsOffset < 700){
+      $('.testimonials').css('visibility','visible');
+      $('.testimonials').addClass('animated fadeInRight');
+   }
+
+   let blogOffset = $('.blog').offset().top - scrollTop;
+
+   if(blogOffset < 700){
+      $('.blog').css('visibility','visible');
+      $('.blog').addClass('animated fadeInUp');
+   }
+
+   let contactOffset = $('.contact').offset().top - scrollTop;
+
+   if(contactOffset < 700){
+
+      $('.transform').removeClass('transform');
+   }
+
+   let footerOffset = $('footer>.container').offset().top - scrollTop;
+
+   if(footerOffset < 700){
+      $('footer>.container').css('visibility','visible');
+      $('footer>.container').addClass('animated lightSpeedIn');
+   }
+
 
 });
+
+setTimeout( function(){
+   $('.services').css('visibility','visible');
+   $('.services').addClass('animated lightSpeedIn');
+}
+
+   ,1000);
