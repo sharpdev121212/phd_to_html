@@ -1,5 +1,7 @@
 "use strict";
 
+$('body').removeClass('none');
+
 $('#slider-carousel').carouFredSel({
    responsive:true,
    width:'100%',
@@ -121,6 +123,7 @@ $(window).scroll(function(){
 setTimeout( function(){
    $('.services').css('visibility','visible');
    $('.services').addClass('animated lightSpeedIn');
+   $('#slider-carousel div.animated').removeClass('animated bounceInUp');
 }
 
-   ,1000);
+   ,1600);

@@ -65,7 +65,7 @@ header{
 /**** Slider section ***/
 
 .slider, .slider ul.slider-carousel, .slider ul.slider-carousel li{
-   height:600px;
+   height:100vh;
    width:100%;
    text-align: center;
 }
@@ -513,6 +513,7 @@ section.services{
       }
       textarea{
          height: 150px;
+         padding-top: 10px;
       }
    }
 }
@@ -634,4 +635,8 @@ footer{
 
 .services i:hover{
    transform: scale(1.5) rotateY(180deg);
+}
+
+body.none{
+   display: none;
 }
